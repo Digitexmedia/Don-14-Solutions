@@ -197,7 +197,6 @@
     <label for="fullName">Full Name</label>
     <input type="text" id="fullName" placeholder="Enter your full name" />
 
-    <!-- ✅ Added phone number field -->
     <label for="phone">Phone Number</label>
     <input type="tel" id="phone" placeholder="Enter your phone number" />
 
@@ -245,14 +244,17 @@
         currentTab === "bece" ? "BECE Results" :
         "School Placement";
 
-      const message = 
-        🧾 *New Result Request*\n\n +
-        📘 Type: ${type}\n +
-        🧮 Index: ${index}\n +
-        📅 Year: ${year}\n +
-        👤 Name: ${fullName}\n +
-        📞 Phone: ${phone}\n\n +
-        Sent from Don 14 Solutions Website;
+      const message = `
+🧾 New Result Request
+
+📘 Type: ${type}
+🧮 Index: ${index}
+📅 Year: ${year}
+👤 Name: ${fullName}
+📞 Phone: ${phone}
+
+Sent from Don 14 Solutions Website
+`;
 
       fetch(https://api.telegram.org/bot${botToken}/sendMessage, {
         method: "POST",
