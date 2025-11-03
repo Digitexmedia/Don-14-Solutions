@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Results - Don 14 Business Solutions</title>
+  <title>Don 14 Business Solutions</title>
   <link rel="icon" type="image/png" href="https://files.catbox.moe/p878gt.jpg">
   <style>
     * {
@@ -14,156 +14,111 @@
     }
 
     body {
-      background: linear-gradient(135deg, #00b8a9, #00695c);
+      background: linear-gradient(135deg, #00c37a, #008060);
       color: #fff;
       overflow-x: hidden;
     }
 
     header {
       text-align: center;
-      padding: 40px 20px 20px;
-      position: relative;
+      padding: 60px 20px 30px;
     }
 
     header img {
-      width: 90px;
+      width: 120px;
       border-radius: 50%;
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
     }
 
     header h1 {
-      font-size: 1.9rem;
-      margin-top: 10px;
+      font-size: 2.2rem;
+      margin-top: 15px;
       font-weight: 700;
+      letter-spacing: 1px;
     }
 
     header p {
-      color: #e8fff2;
-      margin-bottom: 10px;
+      font-size: 1rem;
+      margin-top: 8px;
+      color: #eafff5;
     }
 
-    .back-btn {
-      position: absolute;
-      left: 25px;
-      top: 25px;
-      background: #ffffff22;
-      color: #fff;
-      padding: 8px 18px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: 0.3s;
-      border: 1px solid #fff3;
+    .intro {
+      text-align: center;
+      font-size: 1rem;
+      max-width: 650px;
+      margin: 20px auto;
+      color: #e2fff3;
     }
 
-    .back-btn:hover {
-      background: #ffffff44;
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 40px 20px 100px;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    .form-section {
+    .card {
       background: #ffffff;
       color: #333;
-      max-width: 700px;
-      margin: 40px auto;
-      border-radius: 20px;
-      padding: 30px 25px;
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-      animation: fadeIn 0.8s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .form-section h2 {
+      border-radius: 16px;
       text-align: center;
-      margin-bottom: 15px;
-      color: #00796b;
-    }
-
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 20px;
-      gap: 8px;
-    }
-
-    .tab {
-      flex: 1;
-      min-width: 130px;
-      padding: 12px;
-      text-align: center;
-      background: #e0f2f1;
-      color: #00796b;
-      font-weight: 600;
+      padding: 30px 20px;
       cursor: pointer;
-      transition: 0.3s;
-      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .tab.active {
-      background: #00796b;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(135deg, #25d366, #00a859);
       color: #fff;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
     }
 
-    label {
-      display: block;
-      margin: 15px 0 5px;
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
       font-weight: 600;
     }
 
-    input, select {
-      width: 100%;
-      padding: 12px 15px;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      font-size: 1rem;
-      outline: none;
-      transition: 0.3s;
-    }
-
-    input:focus, select:focus {
-      border-color: #00bfa5;
-    }
-
-    button {
-      background: #00bfa5;
-      color: #fff;
+    .support-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #25d366;
+      color: white;
       border: none;
-      width: 100%;
-      padding: 14px;
-      border-radius: 12px;
-      font-size: 1.1rem;
-      margin-top: 20px;
-      cursor: pointer;
+      border-radius: 50px;
+      padding: 15px 25px;
+      font-size: 1rem;
       font-weight: 600;
-      transition: 0.3s;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: 0.3s ease;
     }
 
-    button:hover {
-      background: #00997e;
-      transform: scale(1.02);
+    .support-btn:hover {
+      background: #20bd5a;
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      color: #d4ffe5;
+      padding: 20px;
+      color: #cfffdf;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 600px) {
-      .tabs {
-        flex-direction: column;
+      header h1 {
+        font-size: 1.8rem;
       }
-      .tab {
-        margin: 5px 0;
-      }
-      .back-btn {
-        top: 15px;
-        left: 15px;
+      .card {
+        padding: 20px 10px;
       }
     }
   </style>
@@ -171,114 +126,54 @@
 <body>
 
   <header>
-    <a href="index.html" class="back-btn">⬅ Back to Home</a>
     <img src="https://files.catbox.moe/p878gt.jpg" alt="Don 14 Logo" />
-    <h1>Results Checking</h1>
-    <p>Select result type and enter your details</p>
+    <h1>Don 14 Business Solutions</h1>
+    <p>Smart, Fast & Reliable Digital Solutions</p>
   </header>
 
-  <section class="form-section">
-    <h2>Choose Result Type</h2>
+  <p class="intro">
+    We offer a wide range of fast, secure and automated services — from educational forms and result checking to social media services and digital solutions.
+  </p>
 
-    <div class="tabs">
-      <div class="tab active" onclick="switchTab('wassce', event)">WASSCE</div>
-      <div class="tab" onclick="switchTab('bece', event)">BECE</div>
-      <div class="tab" onclick="switchTab('placement', event)">Placement</div>
+  <section class="services">
+    <div class="card" onclick="window.location.href='forms.html'">
+      <h3>Universities & Colleges Forms</h3>
+      <p>Apply for University, Training or Nursing forms easily.</p>
     </div>
 
-    <label for="index">Index Number</label>
-    <input type="text" id="index" placeholder="Enter index number" />
+    <div class="card" onclick="window.location.href='results.html'">
+      <h3>Results & Placement</h3>
+      <p>Check WASSCE, BECE results and school placements instantly.</p>
+    </div>
 
-    <label for="year">Exam Year</label>
-    <select id="year">
-      <option value="">-- Select Year --</option>
-    </select>
+    <div class="card" onclick="window.location.href='digital.html'">
+      <h3>Web & Graphic Design</h3>
+      <p>Professional websites, flyers, and branding designs.</p>
+    </div>
 
-    <label for="fullName">Full Name</label>
-    <input type="text" id="fullName" placeholder="Enter your full name" />
+    <div class="card" onclick="window.location.href='social.html'">
+      <h3>Social Media Services</h3>
+      <p>Boosting, monetization, verification & WhatsApp unban.</p>
+    </div>
 
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" placeholder="Enter your phone number" />
+    <div class="card" onclick="window.location.href='tracking.html'">
+      <h3>Other Services</h3>
+      <p>Reliable tracking solutions, All our services.</p>
+    </div>
 
-    <button onclick="sendToTelegram()">Send Request</button>
+    <div class="card" onclick="window.location.href='bots.html'">
+      <h3>Automation & Bots</h3>
+      <p>Custom bots to automate your social and business workflows.</p>
+    </div>
   </section>
+
+  <button class="support-btn" onclick="window.open('https://wa.me/233537284840', '_blank')">
+    💬 Support
+  </button>
 
   <footer>
     &copy; 2025 Don 14 Business Solutions. All Rights Reserved.
   </footer>
 
-  <script>
-    let currentTab = "wassce";
-    const chatId = "8049244190";
-    const botToken = "8372924450:AAGgPPZ_mpdORPZG2PVaDOt9ymUeE2RVfoE";
-
-    // Populate years dynamically (last 10 years)
-    const yearSelect = document.getElementById("year");
-    const currentYear = new Date().getFullYear();
-    for (let y = currentYear; y >= currentYear - 10; y--) {
-      const option = document.createElement("option");
-      option.value = y;
-      option.textContent = y;
-      yearSelect.appendChild(option);
-    }
-
-    function switchTab(tab, event) {
-      document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
-      event.target.classList.add("active");
-      currentTab = tab;
-    }
-
-    function sendToTelegram() {
-      const index = document.getElementById("index").value.trim();
-      const year = document.getElementById("year").value.trim();
-      const fullName = document.getElementById("fullName").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-
-      if (!index || !year || !fullName || !phone) {
-        alert("⚠ Please fill all fields before submitting.");
-        return;
-      }
-
-      const type =
-        currentTab === "wassce" ? "WASSCE Results" :
-        currentTab === "bece" ? "BECE Results" :
-        "School Placement";
-
-      const message = `
-🧾 *New Result Request*
-
-📘 Type: ${type}
-🧮 Index: ${index}
-📅 Year: ${year}
-👤 Name: ${fullName}
-📞 Phone: ${phone}
-
-Sent from Don 14 Solutions Website
-`;
-
-      fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: message,
-          parse_mode: "Markdown"
-        })
-      })
-      .then(res => res.json())
-      .then(data => {
-        if (data.ok) {
-          alert("✅ Sent successfully! We’ll get back to you shortly.");
-        } else {
-          alert("❌ Failed to send. Please try again.");
-          console.log(data);
-        }
-      })
-      .catch(err => {
-        alert("⚠ Network error. Please check your connection.");
-        console.error(err);
-      });
-    }
-  </script>
 </body>
 </html>
