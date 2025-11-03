@@ -245,7 +245,7 @@
         "School Placement";
 
       const message = `
-🧾 New Result Request
+🧾 *New Result Request*
 
 📘 Type: ${type}
 🧮 Index: ${index}
@@ -256,7 +256,7 @@
 Sent from Don 14 Solutions Website
 `;
 
-      fetch(https://api.telegram.org/bot${botToken}/sendMessage, {
+      fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
